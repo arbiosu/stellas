@@ -70,7 +70,7 @@ function FindUs() {
   return (
     <div className='container mx-auto p-6'>
       <div className='flex flex-col items-center space-y-4 text-center'>
-        <h2 className='text-3xl md:text-4xl'>Find Us</h2>
+        <h2 className='text-3xl md:text-4xl'>Our Location</h2>
         <div className='flex items-center justify-center'>
           <MapPin className='mr-2 h-8 w-8' />
           <Link

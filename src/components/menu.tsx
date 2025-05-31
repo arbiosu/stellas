@@ -19,7 +19,12 @@ export interface MenuItemPreview {
 
 function MenuItemPreviewCard({ item }: { item: MenuItemPreview }) {
   return (
-    <Link href={item.menuSrc} target='_blank' rel='noopener noreferrer'>
+    <Link
+      href={item.menuSrc}
+      target='_blank'
+      rel='noopener noreferrer'
+      prefetch={false}
+    >
       <Card className='border-none shadow-none transition-all duration-300 hover:shadow-lg'>
         <CardHeader className='text-center'>
           <CardTitle className='text-xl'>{item.type}</CardTitle>
@@ -50,6 +55,7 @@ export default function MenuPreview({ items }: { items: MenuItemPreview[] }) {
           href='/2025_Stella_Pizza_Menu_Cherry_Hill_NJ.pdf'
           target='_blank'
           rel='noopener noreferrer'
+          prefetch={false}
         >
           <Button size={'lg'} variant={'destructive'}>
             View our full menu <MenuSquare />
