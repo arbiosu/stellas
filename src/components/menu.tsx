@@ -18,7 +18,7 @@ export interface MenuItemPreview {
 
 function MenuItemPreviewCard({ item }: { item: MenuItemPreview }) {
   return (
-    <Card className='bg-red-100 transition-all duration-300 hover:shadow-lg'>
+    <Card className='border-none shadow-none transition-all duration-300 hover:shadow-lg'>
       <CardHeader className='text-center'>
         <CardTitle className='text-xl'>{item.type}</CardTitle>
         <CardDescription className='text-slate-800'>

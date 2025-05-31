@@ -5,13 +5,13 @@ export default function Banner() {
         className='absolute top-1/2 left-[max(-7rem,calc(50%-52rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl'
         aria-hidden='true'
       >
-        <div className='aspect-577/310 w-144.25 bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-30'></div>
+        <div className='aspect-577/310 w-144.25 bg-linear-to-r from-red-700 to-slate-700 opacity-30'></div>
       </div>
       <div
         className='absolute top-1/2 left-[max(45rem,calc(50%+8rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl'
         aria-hidden='true'
       >
-        <div className='aspect-577/310 w-144.25 bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-30'></div>
+        <div className='aspect-577/310 w-144.25 bg-linear-to-r from-red-700 to-slate-700 opacity-30'></div>
       </div>
       <div className='flex flex-wrap items-center gap-x-4 gap-y-2'>
         <p className='text-sm/6 text-gray-900'>
@@ -23,7 +23,7 @@ export default function Banner() {
           >
             <circle cx='1' cy='1' r='1' />
           </svg>
-          Register for our Order Online and receive 10% off your first order!
+          Register and receive 10% off your first order!
         </p>
         <a
           href='https://stellapizzacherryhillnj.pdqonlineordering.com/'
