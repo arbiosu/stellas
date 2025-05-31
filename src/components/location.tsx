@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardTitle, CardHeader, CardContent } from '@/components/ui/card';
 import { Clock, MapPin } from 'lucide-react';
 
@@ -24,7 +25,31 @@ export function HoursCard() {
             <p>Closed</p>
           </div>
           <div className='text-base font-medium md:text-lg'>
-            <p>Tuesday-Saturday</p>
+            <p>Tuesday</p>
+          </div>
+          <div className='text-base font-bold md:text-lg'>
+            <p>11AM - 9PM</p>
+          </div>
+          <div className='text-base font-medium md:text-lg'>
+            <p>Wednesday</p>
+          </div>
+          <div className='text-base font-bold md:text-lg'>
+            <p>11AM - 9PM</p>
+          </div>
+          <div className='text-base font-medium md:text-lg'>
+            <p>Thursday</p>
+          </div>
+          <div className='text-base font-bold md:text-lg'>
+            <p>11AM - 9PM</p>
+          </div>
+          <div className='text-base font-medium md:text-lg'>
+            <p>Friday</p>
+          </div>
+          <div className='text-base font-bold md:text-lg'>
+            <p>11AM - 9PM</p>
+          </div>
+          <div className='text-base font-medium md:text-lg'>
+            <p>Saturday</p>
           </div>
           <div className='text-base font-bold md:text-lg'>
             <p>11AM - 9PM</p>
@@ -48,9 +73,14 @@ function FindUs() {
         <h2 className='text-3xl md:text-4xl'>Find Us</h2>
         <div className='flex items-center justify-center'>
           <MapPin className='mr-2 h-8 w-8' />
-          <p className='text-base md:text-lg'>
-            219 Haddonfield-Berlin Rd., Cherry Hill, NJ, 08034
-          </p>
+          <Link
+            href='https://maps.app.goo.gl/gEL6CG4fFpFyRLwW6'
+            target='_blank'
+          >
+            <p className='text-base hover:underline md:text-lg'>
+              219 Haddonfield-Berlin Rd., Cherry Hill, NJ, 08034
+            </p>
+          </Link>
         </div>
         <div className='mt-6 h-[300px] w-full max-w-3xl overflow-hidden rounded-lg border'>
           <Image
