@@ -14,27 +14,30 @@ export interface MenuItemPreview {
   type: string;
   description: string;
   src: string;
+  menuSrc: string;
 }
 
 function MenuItemPreviewCard({ item }: { item: MenuItemPreview }) {
   return (
-    <Card className='border-none shadow-none transition-all duration-300 hover:shadow-lg'>
-      <CardHeader className='text-center'>
-        <CardTitle className='text-xl'>{item.type}</CardTitle>
-        <CardDescription className='text-slate-800'>
-          {item.description}
-        </CardDescription>
-      </CardHeader>
-      <CardContent className='flex justify-center'>
-        <Image
-          src={item.src}
-          alt={item.type}
-          height={64}
-          width={64}
-          unoptimized
-        />
-      </CardContent>
-    </Card>
+    <Link href={item.menuSrc} target='_blank' rel='noopener noreferrer'>
+      <Card className='border-none shadow-none transition-all duration-300 hover:shadow-lg'>
+        <CardHeader className='text-center'>
+          <CardTitle className='text-xl'>{item.type}</CardTitle>
+          <CardDescription className='text-slate-800'>
+            {item.description}
+          </CardDescription>
+        </CardHeader>
+        <CardContent className='flex justify-center'>
+          <Image
+            src={item.src}
+            alt={item.type}
+            height={64}
+            width={64}
+            unoptimized
+          />
+        </CardContent>
+      </Card>
+    </Link>
   );
 }
 
