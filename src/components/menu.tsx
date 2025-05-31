@@ -7,6 +7,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Button } from './ui/button';
+import { MenuSquare } from 'lucide-react';
 
 export interface MenuItemPreview {
   type: string;
@@ -46,9 +48,9 @@ export default function MenuPreview({ items }: { items: MenuItemPreview[] }) {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <span className='text-xl font-medium hover:underline'>
-            View our full menu
-          </span>
+          <Button size={'lg'} variant={'destructive'}>
+            View our full menu <MenuSquare />
+          </Button>
         </Link>
       </div>
       <div className='grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-4'>
