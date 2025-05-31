@@ -82,9 +82,9 @@ function FindUs() {
             </p>
           </Link>
         </div>
-        <div className='mt-6 h-[300px] w-full max-w-3xl overflow-hidden rounded-lg border'>
+        <div className='mt-6 h-full w-full max-w-3xl overflow-hidden rounded-lg border'>
           <Image
-            src='/stellas-location.webp'
+            src='/stella-sign.jpeg'
             alt='Front view of Stella Pizza in Cherry Hill New Jersey'
             width={800}
             height={600}

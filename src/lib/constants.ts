@@ -59,20 +59,20 @@ export const MENU_ITEMS: MenuItemPreview[] = [
   {
     type: 'Paninis',
     description: 'Served on Ciabatta bread',
-    src: '/bread.svg',
+    src: '/panini.svg',
     menuSrc: '/menu/paninis.png',
   },
   {
     type: 'Classic Italian Subs',
     description: 'Your favorite Italian subs',
-    src: '/bread.svg',
+    src: '/sub.svg',
     menuSrc: '/menu/subs.png',
   },
   {
     type: 'Hoagies',
     description:
       'Served with EVOO, lettuce, tomatoes, onions, oregano, salt & pepper on an Italian roll',
-    src: '/bread.svg',
+    src: '/hoagie.svg',
     menuSrc: '/menu/hoagies.png',
   },
 ];

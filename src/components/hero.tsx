@@ -8,7 +8,7 @@ export function HeroSection() {
       <div className='container mx-auto'>
         <div className='flex flex-col items-center space-y-4 text-center'>
           <div className='space-y-2'>
-            <h1 className='font-italiana text-5xl font-extrabold md:text-7xl lg:text-8xl'>
+            <h1 className='font-italiana text-7xl font-extrabold md:text-7xl lg:text-8xl'>
               Stella Pizza Cherry Hill
             </h1>
             <p className='font-lora mx-auto max-w-[700px] text-base md:text-xl'>
@@ -24,6 +24,7 @@ export function HeroSection() {
               <Link
                 href='https://stellapizzacherryhillnj.pdqonlineordering.com/'
                 target='_blank'
+                className='font-bold'
               >
                 Order Online <ExternalLink />
               </Link>
