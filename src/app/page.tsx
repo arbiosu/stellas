@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { HeroSection } from '@/components/hero';
-import PhotosSection from '@/components/photo-carousel';
 import MenuPreview from '@/components/menu';
 import LocationSection from '@/components/location';
 import { SiteFooter } from '@/components/footer';
