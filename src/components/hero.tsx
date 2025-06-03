@@ -19,22 +19,25 @@ export function HeroSection() {
             <Button
               asChild
               size='lg'
-              className='bg-green-600 hover:bg-emerald-700'
+              className='bg-green-600 p-6 text-lg hover:bg-emerald-700'
             >
               <Link
                 href='https://stellapizzacherryhillnj.pdqonlineordering.com/'
                 target='_blank'
-                className='font-bold'
               >
                 Order Online <ExternalLink />
               </Link>
             </Button>
-            <Button asChild variant='outline' size='lg'>
+            <Button asChild variant='outline' size='lg' className='p-6 text-lg'>
               <Link href='#menu'>
                 View Menu <MenuSquare />
               </Link>
             </Button>
-            <Button asChild size='lg' className='bg-red-600 hover:bg-rose-700'>
+            <Button
+              asChild
+              size='lg'
+              className='bg-red-600 p-6 text-lg hover:bg-rose-700'
+            >
               <Link href='tel:8564280055'>
                 Call Us <PhoneOutgoing />
               </Link>
