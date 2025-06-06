@@ -127,10 +127,10 @@ export function Hero() {
             {/* Main image */}
             <div className='relative transform overflow-hidden rounded-3xl transition-all duration-700 group-hover:scale-105'>
               <Image
-                src='/stella-grandma.jpeg'
+                src='/pep-compressed.jpeg'
                 width={800}
                 height={600}
-                alt='Dragonfly Ceramics Bowl - Handcrafted artisan pottery'
+                alt='Pepperoni Pizza - Stella Pizza Cherry Hill'
                 className='h-auto w-full object-cover brightness-105 contrast-105 filter'
                 priority
               />

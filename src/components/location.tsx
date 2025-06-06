@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardTitle, CardHeader, CardContent } from '@/components/ui/card';
-import { ExternalLink, MapPin, Clock, Phone, Star } from 'lucide-react';
+import { ExternalLink, MapPin, Clock } from 'lucide-react';
 
 const HOURS_DATA = [
   { day: 'Monday', hours: 'Closed', isClosed: true },
@@ -31,13 +31,14 @@ function HoursCard() {
       const now = new Date();
       const currentDay = getCurrentDayStatus();
       const currentHour = now.getHours();
+      const currentMinute = now.getMinutes();
 
       setCurrentDayIndex(currentDay);
 
       if (HOURS_DATA[currentDay].isClosed) {
         setIsOpen(false);
       } else {
-        setIsOpen(currentHour >= 11 && currentHour < 21);
+        setIsOpen(currentHour >= 11 && currentHour < 21 && currentMinute < 30);
       }
     };
 
