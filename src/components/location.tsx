@@ -38,7 +38,10 @@ function HoursCard() {
       if (HOURS_DATA[currentDay].isClosed) {
         setIsOpen(false);
       } else {
-        setIsOpen(currentHour >= 11 && currentHour < 21 && currentMinute < 30);
+        setIsOpen(
+          (currentHour >= 11 && currentHour < 20) ||
+            (currentHour === 20 && currentMinute <= 45)
+        );
       }
     };
 
