@@ -1,31 +1,24 @@
-import Image from 'next/image';
-import { HeroSection } from '@/components/hero';
+import { Hero } from '@/components/hero';
 import MenuPreview from '@/components/menu';
 import LocationSection from '@/components/location';
 import { SiteFooter } from '@/components/footer';
 import Banner from '@/components/top-banner';
 import BentoGridGallery from '@/components/bento-image-grid';
+import GoogleReviewsCarousel from '@/components/reviews';
 
 import { MENU_ITEMS } from '@/lib/constants';
 
 export default function Home() {
   return (
-    <div className=''>
-      <main className='space-y-10'>
+    <div>
+      <main>
         <Banner />
-        <HeroSection />
-        <div className='relative mx-auto flex justify-center'>
-          <Image
-            src='/stella-logo.png'
-            alt='Stella Pizza Cherry Hill Logo'
-            width={400}
-            height={300}
-            unoptimized
-          />
-        </div>
-        <BentoGridGallery />
+        <Hero />
+        <div className='p-2'></div>
+        <GoogleReviewsCarousel />
         <MenuPreview items={MENU_ITEMS} />
         <LocationSection />
+        <BentoGridGallery />
       </main>
       <SiteFooter />
     </div>
