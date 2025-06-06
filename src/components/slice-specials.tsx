@@ -143,7 +143,8 @@ export default function ShowMeGrid({ cards }: { cards: SpecialsProps[] }) {
         </span>
       </h3>
       <p className='mx-auto mb-4 max-w-2xl text-xl text-gray-600'>
-        Available everyday for eat in or take out only. First come, first serve!
+        Available everyday,{' '}
+        <span className='font-extrabold underline'>walk-in only!</span>
       </p>
       <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
         {cards.map((card, index) => (
