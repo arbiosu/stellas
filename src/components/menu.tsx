@@ -72,8 +72,7 @@ export default function MenuPreview({ items }: { items: MenuItemPreview[] }) {
             </span>
           </h2>
           <p className='mx-auto mb-8 max-w-2xl text-lg text-gray-600'>
-            Discover our carefully crafted selection of authentic Italian
-            dishes, made with the finest ingredients and traditional recipes.
+            Discover our latest menu
           </p>
           <Link
             href='/2025_Stella_Pizza_Menu_Cherry_Hill_NJ.pdf'

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ExternalLink, PhoneOutgoing, MenuSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Badge } from './ui/badge';
 
 export function HeroSection() {
   return (
@@ -64,7 +65,7 @@ export function Hero() {
         {/* Text content */}
         <div className='flex-1 space-y-8 text-center lg:pr-12 lg:text-left'>
           <div className='space-y-4'>
-            <h1 className='font-italiana text-7xl leading-none font-light tracking-tight text-stone-800 md:text-8xl lg:text-9xl'>
+            <h1 className='font-italiana text-6xl leading-none font-light tracking-tight text-stone-800 md:text-8xl lg:text-9xl'>
               <span className='block transform cursor-default transition-transform duration-500 hover:scale-105'>
                 Stella Pizza
               </span>
@@ -74,7 +75,6 @@ export function Hero() {
             </h1>
           </div>
 
-          {/* Handmade badge */}
           <div className='flex justify-center lg:justify-start'>
             <div className='group relative'>
               <Image
@@ -88,13 +88,11 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Description */}
           <p className='mx-auto max-w-md text-lg leading-relaxed text-stone-600 md:text-xl lg:mx-0'>
             Eat in, Take Out, and Delivery, Proudly Serving Cherry Hill for 20+
             Years
           </p>
 
-          {/* CTA Button */}
           <div className='pt-6'>
             <Link
               href='https://stellapizzacherryhillnj.pdqonlineordering.com/'
@@ -109,6 +107,14 @@ export function Hero() {
                 <div className='absolute inset-0 origin-left scale-x-0 transform bg-stone-800 transition-transform duration-300 group-hover:scale-x-100'></div>
               </Button>
             </Link>
+          </div>
+          <div>
+            <Badge asChild variant={'destructive'} className='text-white'>
+              <Link href='tel:8564280055' prefetch={false}>
+                <PhoneOutgoing />
+                856-428-0055
+              </Link>
+            </Badge>
           </div>
         </div>
 
