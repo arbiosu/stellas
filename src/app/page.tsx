@@ -7,25 +7,7 @@ import BentoGridGallery from '@/components/bento-image-grid';
 import GoogleReviewsCarousel from '@/components/reviews';
 import SpecialsGrid from '@/components/slice-specials';
 
-import { MENU_ITEMS } from '@/lib/constants';
-
-const sliceSpecials = [
-  {
-    label: '2 Plain Slices + Fountain Soda',
-    imgUrl: '/plain-slices.jpeg',
-    price: '8.50',
-  },
-  {
-    label: '2 Specialty Slices + Fountain Soda',
-    imgUrl: '/specialty-slices.jpeg',
-    price: '10.50',
-  },
-  {
-    label: '2 Square Slices + Fountain Soda',
-    imgUrl: '/square-slices.jpeg',
-    price: '8.50',
-  },
-];
+import { MENU_ITEMS, SLICE_SPECIALS } from '@/lib/constants';
 
 export default function Home() {
   return (
@@ -37,7 +19,7 @@ export default function Home() {
         <GoogleReviewsCarousel />
         <MenuPreview items={MENU_ITEMS} />
         <LocationSection />
-        <SpecialsGrid cards={sliceSpecials} />
+        <SpecialsGrid cards={SLICE_SPECIALS} />
         <BentoGridGallery />
       </main>
       <SiteFooter />

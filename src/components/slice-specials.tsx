@@ -27,7 +27,7 @@ function SpecialsCards({
       >
         <CardContent className='relative h-full p-0'>
           {/* Image container */}
-          <div className='relative h-64 overflow-hidden md:h-80'>
+          <div className='relative aspect-square overflow-hidden'>
             <Image
               src={imgUrl}
               alt={label}
@@ -37,7 +37,8 @@ function SpecialsCards({
                 'h-full w-full object-cover',
                 'transition-transform duration-700 ease-out',
                 'group-hover:scale-105',
-                'will-change-transform'
+                'will-change-transform',
+                'aspect-square'
               )}
               unoptimized
             />
@@ -106,7 +107,7 @@ function SpecialsCards({
   );
 }
 
-export default function ShowMeGrid({ cards }: { cards: SpecialsProps[] }) {
+export default function SpecialsGrid({ cards }: { cards: SpecialsProps[] }) {
   if (cards.length === 0) {
     return (
       <div className='flex items-center justify-center py-16'>
