@@ -8,12 +8,12 @@ import { ExternalLink, MapPin, Clock } from 'lucide-react';
 
 const HOURS_DATA = [
   { day: 'Monday', hours: 'Closed', isClosed: true },
-  { day: 'Tuesday', hours: '11AM - 9PM', isClosed: true },
-  { day: 'Wednesday', hours: '11AM - 9PM', isClosed: true },
-  { day: 'Thursday', hours: '11AM - 9PM', isClosed: true },
-  { day: 'Friday', hours: '11AM - 9PM', isClosed: true },
-  { day: 'Saturday', hours: '11AM - 9PM', isClosed: true },
-  { day: 'Sunday', hours: '12PM - 9PM', isClosed: true },
+  { day: 'Tuesday', hours: '11AM - 9PM', isClosed: false },
+  { day: 'Wednesday', hours: '11AM - 9PM', isClosed: false },
+  { day: 'Thursday', hours: '11AM - 9PM', isClosed: false },
+  { day: 'Friday', hours: '11AM - 9PM', isClosed: false },
+  { day: 'Saturday', hours: '11AM - 9PM', isClosed: false },
+  { day: 'Sunday', hours: '12PM - 9PM', isClosed: false },
 ];
 
 function getCurrentDayStatus() {
