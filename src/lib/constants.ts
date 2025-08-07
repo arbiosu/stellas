@@ -8,7 +8,7 @@ export const SLICE_SPECIALS = [
   },
   {
     label: '2 Specialty Slices + Fountain Soda',
-    imgUrl: '/specialty-slices.jpeg',
+    imgUrl: '/new-specials-pic.jpg',
     price: '10.50',
   },
   {

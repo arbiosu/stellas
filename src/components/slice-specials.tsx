@@ -18,86 +18,81 @@ function SpecialsCards({
     <div className='group block'>
       <Card
         className={cn(
-          'relative overflow-hidden border-0 bg-white dark:bg-gray-900',
+          'relative overflow-hidden border-0 bg-white p-0',
           'transition-all duration-500 ease-out',
           'hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/25',
-          'group-hover:-translate-y-1 group-hover:scale-[1.03]',
+          'group-hover:-translate-y-1 group-hover:scale-[1.02]',
           'will-change-transform'
         )}
       >
-        <CardContent className='relative h-full p-0'>
-          {/* Image container */}
-          <div className='relative aspect-square overflow-hidden'>
+        <CardContent className='relative m-0 h-full p-0'>
+          <div className='relative -m-0 h-64 overflow-hidden md:h-72 lg:h-80'>
             <Image
               src={imgUrl}
               alt={label}
-              width={400}
-              height={320}
+              fill
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               className={cn(
-                'h-full w-full object-cover',
+                'object-cover object-center',
                 'transition-transform duration-700 ease-out',
                 'group-hover:scale-105',
-                'will-change-transform',
-                'aspect-square'
+                'will-change-transform'
               )}
-              unoptimized
+              priority={false}
+              placeholder='blur'
+              blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=='
             />
 
-            {/* Price Badge - positioned over image */}
             <div className='absolute top-4 left-4'>
               <Badge
                 variant='secondary'
                 className={cn(
-                  'bg-white/90 font-semibold text-gray-900',
-                  'border border-white/20 backdrop-blur-sm',
+                  'bg-white/95 px-3 py-1.5 text-lg font-bold text-gray-900',
+                  'border border-white/30 backdrop-blur-md',
                   'transition-all duration-300 ease-out',
                   'group-hover:bg-gradient-to-r group-hover:from-gray-900 group-hover:to-red-600',
                   'group-hover:border-transparent group-hover:text-white',
-                  'shadow-sm group-hover:shadow-md'
+                  'shadow-lg group-hover:shadow-xl'
                 )}
               >
                 ${price}
               </Badge>
             </div>
 
-            {/* Subtle overlay that appears on hover */}
             <div
               className={cn(
-                'absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent',
+                'absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent',
                 'opacity-0 transition-opacity duration-500 ease-out',
                 'group-hover:opacity-100'
               )}
             />
 
-            {/* Clean shimmer effect */}
             <div
               className={cn(
                 'absolute inset-0 -translate-x-full',
-                'bg-gradient-to-r from-transparent via-white/10 to-transparent',
+                'bg-gradient-to-r from-transparent via-white/20 to-transparent',
                 'transition-transform duration-1000 ease-out',
                 'group-hover:translate-x-full'
               )}
             />
           </div>
 
-          {/* Content area */}
-          <div className='relative p-6'>
+          <div className='relative p-6 lg:p-8'>
             <h3
               className={cn(
-                'text-xl font-bold text-gray-900',
-                'transition-colors duration-300 ease-out md:text-2xl',
+                'text-xl leading-tight font-bold text-gray-900',
+                'transition-colors duration-300 ease-out md:text-2xl lg:text-3xl',
                 'group-hover:text-red-600'
               )}
             >
               {label}
             </h3>
 
-            {/* Subtle indicator line */}
             <div
               className={cn(
-                'mt-3 h-0.5 w-0 bg-gradient-to-r from-gray-900 to-red-600',
+                'mt-4 h-1 w-0 rounded-full bg-gradient-to-r from-gray-900 to-red-600',
                 'transition-all duration-500 ease-out',
-                'group-hover:w-12'
+                'group-hover:w-16'
               )}
             />
           </div>
@@ -136,18 +131,21 @@ export default function SpecialsGrid({ cards }: { cards: SpecialsProps[] }) {
   }
 
   return (
-    <div className='font-lora mx-auto w-full max-w-6xl p-4 text-center'>
-      <h3 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl'>
+    <div className='font-lora mx-auto w-full max-w-7xl p-4 text-center'>
+      <h3 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
         Everyday Specials{' '}
         <span className='bg-gradient-to-r from-gray-900 via-red-700 to-red-800 bg-clip-text text-transparent'>
           at Stella
         </span>
       </h3>
-      <p className='mx-auto mb-4 max-w-2xl text-xl text-gray-600'>
+      <p className='mx-auto mb-8 max-w-2xl text-xl text-gray-600 lg:text-2xl'>
         Available everyday,{' '}
-        <span className='font-extrabold underline'>walk-in only!</span>
+        <span className='font-extrabold underline decoration-red-600 decoration-2 underline-offset-4'>
+          walk-in only!
+        </span>
       </p>
-      <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
+
+      <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3'>
         {cards.map((card, index) => (
           <SpecialsCards key={index} {...card} index={index} />
         ))}
