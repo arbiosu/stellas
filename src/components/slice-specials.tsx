@@ -20,13 +20,12 @@ function SpecialsCards({
         className={cn(
           'relative overflow-hidden border-0 bg-white p-0',
           'transition-all duration-500 ease-out',
-          'hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/25',
-          'group-hover:-translate-y-1 group-hover:scale-[1.02]',
+          'hover:shadow-xl hover:shadow-black/5',
           'will-change-transform'
         )}
       >
         <CardContent className='relative m-0 h-full p-0'>
-          <div className='relative -m-0 h-64 overflow-hidden md:h-72 lg:h-80'>
+          <div className='relative -m-0 h-64 w-full overflow-hidden md:h-72 lg:h-80'>
             <Image
               src={imgUrl}
               alt={label}
@@ -35,7 +34,6 @@ function SpecialsCards({
               className={cn(
                 'object-cover object-center',
                 'transition-transform duration-700 ease-out',
-                'group-hover:scale-105',
                 'will-change-transform'
               )}
               priority={false}
@@ -50,7 +48,7 @@ function SpecialsCards({
                   'bg-white/95 px-3 py-1.5 text-lg font-bold text-gray-900',
                   'border border-white/30 backdrop-blur-md',
                   'transition-all duration-300 ease-out',
-                  'group-hover:bg-gradient-to-r group-hover:from-gray-900 group-hover:to-red-600',
+                  'group-hover:bg-red-700',
                   'group-hover:border-transparent group-hover:text-white',
                   'shadow-lg group-hover:shadow-xl'
                 )}
@@ -58,23 +56,6 @@ function SpecialsCards({
                 ${price}
               </Badge>
             </div>
-
-            <div
-              className={cn(
-                'absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent',
-                'opacity-0 transition-opacity duration-500 ease-out',
-                'group-hover:opacity-100'
-              )}
-            />
-
-            <div
-              className={cn(
-                'absolute inset-0 -translate-x-full',
-                'bg-gradient-to-r from-transparent via-white/20 to-transparent',
-                'transition-transform duration-1000 ease-out',
-                'group-hover:translate-x-full'
-              )}
-            />
           </div>
 
           <div className='relative p-6 lg:p-8'>

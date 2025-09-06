@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { ITALIANA_FONT, LORA_FONT } from '../../public/fonts/font';
-import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -18,14 +17,7 @@ export default function RootLayout({
       <body
         className={`${ITALIANA_FONT.variable} ${LORA_FONT.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute={'class'}
-          defaultTheme='light'
-          enableSystem={false}
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

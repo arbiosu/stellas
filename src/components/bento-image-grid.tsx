@@ -27,6 +27,21 @@ export default function BentoGridGallery() {
       className: 'aspect-square',
     },
     {
+      src: '/dough.jpeg',
+      alt: 'Hand Rolled Dough, Stella Pizza Cherry Hill NJ',
+      title: 'Hand Rolled Dough',
+      category: 'Pizza',
+      className: 'aspect-[2/1] md:col-span-2',
+    },
+    {
+      src: '/square-slices.jpeg',
+      alt: 'Square Slices, Stella Pizza Cherry Hill NJ',
+      title: 'Square Slices',
+      category: 'Pizza',
+      className: 'aspect-square',
+    },
+
+    {
       src: '/stellas-1.webp',
       alt: 'Fresh Slices',
       title: 'Pizza by the Slice',
@@ -52,7 +67,7 @@ export default function BentoGridGallery() {
     {
       src: '/stella-brooklyn.jpeg',
       alt: 'Thin crust Brooklyn pizza, Stella Pizza Cherry Hill NJ',
-      title: 'Brooklyn Style',
+      title: 'Brooklyn Pizza',
       category: 'Square Pizza',
       className: 'aspect-square',
     },
@@ -71,32 +86,32 @@ export default function BentoGridGallery() {
       className: 'aspect-[2/1] md:col-span-2',
       featured: true,
     },
+
     {
-      src: '/fries.jpeg',
-      alt: 'Small Fries with a size of Cheese Whiz, Stella Pizza Cherry Hill NJ',
-      title: 'Small Fries w/ Cheese Whiz',
-      category: 'Appetizers',
+      src: '/eggplant-parm-1.jpeg',
+      alt: 'Eggplant Parm, Stella Pizza Cherry Hill NJ',
+      title: 'Eggplant Parm',
+      category: 'Panini',
       className: 'aspect-square',
     },
     {
-      src: '/stella-burger.jpeg',
-      alt: 'Cheeseburger Deluxe, Stella Pizza Cherry Hill NJ',
-      title: 'Cheeseburger Deluxe',
-      category: 'Burgers',
+      src: '/stellas-7.webp',
+      alt: 'Sign, Stella Pizza Cherry Hill NJ',
+      title: '',
+      category: 'Ambiance',
       className: 'aspect-square',
     },
     {
       src: '/stella-sicillian.jpeg',
       alt: 'Thin crust plain sicilian, Stella Pizza Cherry Hill NJ',
-      title: 'Sicilian Pizza',
+      title: 'Thin Sicilian Pizza',
       category: 'Square Pizza',
       className: 'aspect-square',
     },
   ];
 
   return (
-    <div className='font-lora container mx-auto max-w-7xl px-4 py-12'>
-      {/* Header Section */}
+    <div className='font-lora container mx-auto max-w-full px-4 py-12'>
       <div className='mb-12 text-center'>
         <h4 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl'>
           Our Menu{' '}
@@ -106,28 +121,24 @@ export default function BentoGridGallery() {
         </h4>
       </div>
 
-      {/* Bento Grid */}
       <div className='grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8'>
         {images.map((image, index) => (
           <div
             key={index}
-            className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] hover:shadow-2xl dark:from-gray-800 dark:to-gray-900 ${image.className}`}
+            className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 shadow-lg transition-all duration-500 ease-out hover:shadow-2xl ${image.className}`}
           >
-            {/* Image Container */}
             <div className={`relative ${image.className}`}>
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
-                className='object-cover transition-transform duration-700 ease-out group-hover:scale-110'
+                className='object-cover'
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 unoptimized
               />
 
-              {/* Gradient Overlay */}
               <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100' />
 
-              {/* Featured Badge */}
               {image.featured && (
                 <div className='absolute top-4 left-4'>
                   <Badge
@@ -139,7 +150,6 @@ export default function BentoGridGallery() {
                 </div>
               )}
 
-              {/* Category Badge */}
               <div className='absolute top-4 right-4'>
                 <Badge
                   variant='outline'
@@ -149,26 +159,22 @@ export default function BentoGridGallery() {
                 </Badge>
               </div>
 
-              {/* Content Overlay */}
               <div className='absolute right-0 bottom-0 left-0 translate-y-6 transform p-6 transition-transform duration-300 ease-out group-hover:translate-y-0'>
                 <h3 className='mb-2 text-lg font-bold text-white opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100'>
                   {image.title}
                 </h3>
               </div>
 
-              {/* Hover Effect Border */}
               <div className='absolute inset-0 rounded-2xl opacity-0 ring-2 ring-white/20 transition-opacity duration-300 group-hover:opacity-100' />
             </div>
 
-            {/* Shimmer Effect */}
             <div className='absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 ease-out group-hover:translate-x-full' />
           </div>
         ))}
       </div>
 
-      {/* Bottom CTA */}
       <div className='mt-16 text-center'>
-        <p className='mb-6 text-xl text-gray-600'>
+        <p className='mb-6 text-2xl'>
           Ready to{' '}
           <span className='bg-gradient-to-r from-gray-900 via-red-700 to-red-800 bg-clip-text text-transparent'>
             taste the best pizza in Cherry Hill?

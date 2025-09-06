@@ -27,7 +27,7 @@ function MenuItemPreviewCard({ item }: { item: MenuItemPreview }) {
       className='group block'
       aria-label={`View ${item.type} section of menu`}
     >
-      <Card className='group-focus-visible:ring-primary h-full border-none shadow-sm transition-all duration-300 group-focus-visible:ring-2 group-focus-visible:ring-offset-2 hover:-translate-y-1 hover:shadow-xl'>
+      <Card className='group-focus-visible:ring-primary h-full border-none shadow-sm transition-all duration-300 group-focus-visible:ring-2 group-focus-visible:ring-offset-2 hover:-translate-y-2 hover:shadow-lg'>
         <CardHeader className='pb-4 text-center'>
           <CardTitle className='group-hover:text-primary text-xl font-semibold text-gray-900 transition-colors duration-200'>
             {item.type}
@@ -57,7 +57,7 @@ export default function MenuPreview({ items }: { items: MenuItemPreview[] }) {
   return (
     <section
       id='menu'
-      className='font-lora bg-gradient-to-b from-white to-gray-50 py-16'
+      className='font-lora py-16'
       aria-labelledby='menu-heading'
     >
       <div className='container mx-auto px-4'>

@@ -51,13 +51,7 @@ function HoursCard() {
   }, []);
 
   return (
-    <Card className='relative h-full overflow-hidden border-2 border-red-100 bg-gradient-to-br from-white via-red-50 to-rose-50 shadow-2xl transition-all duration-500 hover:shadow-red-500/25'>
-      {/* Animated background elements */}
-      <div className='absolute inset-0 opacity-20'>
-        <div className='absolute top-0 left-0 h-72 w-72 animate-pulse rounded-full bg-red-500 blur-3xl filter'></div>
-        <div className='absolute right-0 bottom-0 h-96 w-96 animate-pulse rounded-full bg-rose-400 blur-3xl filter delay-1000'></div>
-      </div>
-
+    <Card className='relative h-full w-full overflow-hidden border-2'>
       <CardHeader className='relative z-10 pb-6 text-center'>
         <div className='mb-2 flex items-center justify-center gap-3'>
           <Clock className='h-8 w-8 animate-pulse text-red-600' />
@@ -67,10 +61,10 @@ function HoursCard() {
         </div>
         <div className='flex items-center justify-center gap-2'>
           <div
-            className={`h-3 w-3 rounded-full ${isOpen ? 'animate-pulse bg-green-500' : 'bg-red-500'}`}
+            className={`h-3 w-3 rounded-full ${isOpen ? 'animate-pulse bg-green-700' : 'bg-red-700'}`}
           ></div>
           <span
-            className={`text-sm font-medium ${isOpen ? 'text-green-600' : 'text-red-600'}`}
+            className={`text-sm font-bold ${isOpen ? 'text-green-700' : 'text-red-700'}`}
           >
             {isOpen ? 'Open Now' : 'Closed'}
           </span>
@@ -100,7 +94,7 @@ function HoursCard() {
                     {item.day}
                   </div>
                   {index === currentDayIndex && (
-                    <span className='inline-flex animate-pulse items-center rounded-full border border-red-200 bg-red-100 px-3 py-1 text-xs font-medium text-red-800'>
+                    <span className='inline-flex animate-pulse items-center rounded-full border border-red-200 bg-red-100 px-3 py-1 text-xs font-medium text-red-900'>
                       Today
                     </span>
                   )}
@@ -132,13 +126,7 @@ function LocationCard() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <Card className='relative h-full overflow-hidden border-2 border-gray-200 bg-gradient-to-br from-white via-gray-50 to-slate-50 shadow-2xl transition-all duration-500 hover:shadow-red-500/25'>
-      {/* Animated background elements */}
-      <div className='absolute inset-0 opacity-15'>
-        <div className='absolute top-0 right-0 h-80 w-80 animate-pulse rounded-full bg-red-400 blur-3xl filter delay-500'></div>
-        <div className='absolute bottom-0 left-0 h-96 w-96 animate-pulse rounded-full bg-rose-300 blur-3xl filter delay-1500'></div>
-      </div>
-
+    <Card className='relative h-full w-full overflow-hidden border-2 border-gray-200'>
       <CardHeader className='relative z-10 pb-6 text-center'>
         <div className='mb-4 flex items-center justify-center gap-3'>
           <MapPin className='h-8 w-8 animate-bounce text-red-600' />
@@ -150,7 +138,6 @@ function LocationCard() {
 
       <CardContent className='relative z-10 flex flex-1 flex-col p-6'>
         <div className='flex flex-col space-y-6'>
-          {/* Address with enhanced styling */}
           <div className='group flex items-center justify-center'>
             <Link
               href='https://maps.app.goo.gl/gEL6CG4fFpFyRLwW6'
@@ -167,7 +154,6 @@ function LocationCard() {
             </Link>
           </div>
 
-          {/* Restaurant Image with enhanced effects */}
           <div className='relative min-h-[300px] flex-1 overflow-hidden rounded-2xl border-2 border-red-200 shadow-2xl'>
             <div className='group relative h-full'>
               <div
@@ -191,7 +177,7 @@ function LocationCard() {
               <div className='absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100'></div>
               <div className='absolute right-4 bottom-4 left-4 translate-y-full transform rounded-lg bg-white/80 p-4 backdrop-blur-sm transition-transform duration-300 group-hover:translate-y-0'>
                 <p className='font-medium text-gray-800'>
-                  Authentic Italian Pizza • Family Owned Since 2005
+                  Authentic Italian Pizza • Family Owned • Established 2005
                 </p>
               </div>
 
@@ -211,20 +197,8 @@ function LocationCard() {
 
 export default function LocationSection() {
   return (
-    <section
-      id='location'
-      className='relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 py-10'
-    >
-      {/* Animated background elements */}
-      <div className='absolute inset-0 opacity-10'>
-        <div className='absolute top-1/4 left-1/4 h-96 w-96 animate-pulse rounded-full bg-red-400 blur-3xl filter'></div>
-        <div className='absolute right-1/4 bottom-1/4 h-96 w-96 animate-pulse rounded-full bg-rose-300 blur-3xl filter delay-1000'></div>
-        <div className='absolute top-3/4 left-3/4 h-64 w-64 animate-pulse rounded-full bg-red-500 blur-3xl filter delay-2000'></div>
-      </div>
-
-      {/* Main content */}
+    <section id='location' className='relative min-h-screen overflow-hidden'>
       <div className='font-lora relative z-10 container mx-auto max-w-7xl px-6'>
-        {/* Section header */}
         <div className='mb-16 text-center'>
           <h3 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl'>
             Visit{' '}

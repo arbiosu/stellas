@@ -15,7 +15,6 @@ export default function Home() {
       <main>
         <Banner />
         <Hero />
-        <div className='p-2'></div>
         <GoogleReviewsCarousel />
         <MenuPreview items={MENU_ITEMS} />
         <LocationSection />
