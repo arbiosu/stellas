@@ -1,7 +1,9 @@
+// source: https://flowbite.com/docs/components/banner/
+
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
-import { X } from 'lucide-react';
 
 export default function Banner() {
   const [isVisible, setIsVisible] = useState(true);
@@ -9,65 +11,65 @@ export default function Banner() {
   if (!isVisible) return null;
 
   return (
-    <div className='relative isolate flex items-center gap-x-6 overflow-hidden border-b border-gray-200 bg-gradient-to-r from-red-50 via-white to-green-50 px-6 py-3 shadow-sm sm:px-3.5'>
-      {/* Animated background elements */}
-      <div
-        className='absolute top-1/2 left-[max(-7rem,calc(50%-52rem))] -z-10 -translate-y-1/2 transform-gpu animate-pulse blur-2xl'
-        aria-hidden='true'
-      >
-        <div className='aspect-square w-36 rounded-full bg-gradient-to-r from-red-400 to-red-600 opacity-20'></div>
-      </div>
-      <div
-        className='absolute top-1/2 left-[max(45rem,calc(50%+8rem))] -z-10 -translate-y-1/2 transform-gpu animate-pulse blur-2xl'
-        aria-hidden='true'
-        style={{ animationDelay: '1s' }}
-      >
-        <div className='aspect-square w-36 rounded-full bg-gradient-to-r from-green-400 to-emerald-600 opacity-20'></div>
-      </div>
-
-      <div className='flex flex-1 flex-wrap items-center gap-x-4 gap-y-2'>
-        <div className='flex items-center gap-2'>
-          <div className='h-2 w-2 animate-bounce rounded-full bg-red-500'></div>
-          <p className='text-sm font-medium text-gray-900'>
-            <strong className='font-bold text-red-700'>🍕 Order Online</strong>
-            <span className='mx-2 text-gray-400'>•</span>
-            <span className='text-gray-700'>Register and receive </span>
-            <span className='rounded-full bg-green-100 px-2 py-0.5 text-xs font-bold text-green-700'>
-              10% OFF
-            </span>
-            <span className='text-gray-700'> your first order!</span>
-          </p>
-        </div>
-      </div>
-
-      <a
-        href='https://stellapizzacherryhillnj.pdqonlineordering.com/'
-        target='_blank'
-        rel='noopener noreferrer'
-        className='group flex-none transform rounded-full bg-gradient-to-r from-red-600 to-red-700 px-4 py-2 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:from-red-700 hover:to-red-800 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600'
-      >
-        <span className='flex items-center gap-2'>
-          Register Now
-          <span
-            className='transition-transform duration-200 group-hover:translate-x-1'
-            aria-hidden='true'
-          >
-            →
+    <div
+      id='sticky-banner'
+      tabIndex={-1}
+      className='fixed start-0 top-0 z-50 flex w-full justify-between border-b border-gray-200 bg-gray-50 p-4'
+    >
+      <div className='mx-auto flex items-center'>
+        <p className='font-lora flex items-center text-sm text-gray-500'>
+          <span className='me-3 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-200 p-1'>
+            <svg
+              className='h-3 w-3 text-gray-500'
+              aria-hidden='true'
+              xmlns='http://www.w3.org/2000/svg'
+              fill='currentColor'
+              viewBox='0 0 18 19'
+            >
+              <path d='M15 1.943v12.114a1 1 0 0 1-1.581.814L8 11V5l5.419-3.871A1 1 0 0 1 15 1.943ZM7 4H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2v5a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V4ZM4 17v-5h1v5H4ZM16 5.183v5.634a2.984 2.984 0 0 0 0-5.634Z' />
+            </svg>
+            <span className='sr-only'>Light bulb</span>
           </span>
-        </span>
-      </a>
-
-      <button
-        type='button'
-        onClick={() => setIsVisible(false)}
-        className='group -m-3 rounded-full p-3 transition-colors duration-200 hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-400'
-        aria-label='Dismiss banner'
-      >
-        <X
-          className='h-5 w-5 text-gray-500 transition-colors duration-200 group-hover:text-gray-700'
-          aria-hidden='true'
-        />
-      </button>
+          <span>
+            Sign up for our online ordering and receive 10% off your first
+            order!{' '}
+            <Link
+              href='https://stellapizzacherryhillnj.pdqonlineordering.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-blue-600 underline'
+              prefetch={false}
+            >
+              Register Now
+            </Link>
+          </span>
+        </p>
+      </div>
+      <div className='flex items-center'>
+        <button
+          data-dismiss-target='#sticky-banner'
+          type='button'
+          onClick={() => setIsVisible(false)}
+          className='inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900'
+        >
+          <svg
+            className='h-3 w-3'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 14 14'
+          >
+            <path
+              stroke='currentColor'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='2'
+              d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
+            />
+          </svg>
+          <span className='sr-only'>Close banner</span>
+        </button>
+      </div>
     </div>
   );
 }
