@@ -17,7 +17,7 @@ export default function Banner() {
       className='fixed start-0 top-0 z-50 flex w-full justify-between border-b border-gray-200 bg-gray-50 p-4'
     >
       <div className='mx-auto flex items-center'>
-        <p className='font-lora flex items-center text-sm text-gray-500'>
+        <p className='font-lora flex items-center text-gray-500'>
           <span className='me-3 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-200 p-1'>
             <svg
               className='h-3 w-3 text-gray-500'
@@ -31,13 +31,12 @@ export default function Banner() {
             <span className='sr-only'>Light bulb</span>
           </span>
           <span>
-            Sign up for our online ordering and receive 10% off your first
-            order!{' '}
+            Join our online ordering and enjoy 10% off your first order!{' '}
             <Link
               href='https://stellapizzacherryhillnj.pdqonlineordering.com/'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-blue-600 underline'
+              className='inline-block rounded-xl bg-gradient-to-r from-black to-red-800 p-2 text-lg font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:shadow-xl'
               prefetch={false}
             >
               Register Now
