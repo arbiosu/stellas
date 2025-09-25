@@ -14,17 +14,17 @@ interface Review {
 const selectedReviews: Review[] = [
   {
     id: '1',
+    name: 'Joe Polimeni',
+    rating: 5,
+    text: "I would give this place 10 🌟. Been coming here for over 4 years. Pizza is the best I believe in South Jersey. It ranks up to the best pizza joints down the shore. Service is top notch and prices and pretty reasonable. They do deliver but if you are out of your area, do a take out. It's worth it. They also have seating as well. Steeaalaaaaaa (Seinfeld) You will not be disappointed! Give me a like if you tried.",
+    avatar: 'JP',
+  },
+  {
+    id: '2',
     name: 'Sheri Zachary',
     rating: 5,
     text: "Our go-to pizzeria—hands down! The crust is perfect, the sauce is rich and flavorful, and the cheese (or whatever toppings you add) takes it over the top. The sandwiches are fresh, the wings are crave-worthy, and they have a nice selection of salads. Everything on the menu hits the mark. You should try them out - you won't be disappointed!.",
     avatar: 'SZ',
-  },
-  {
-    id: '2',
-    name: 'Joe Polimeni',
-    rating: 5,
-    text: "I would give this place 10 🌟. Been coming here for over 4 years. Pizza is the best I believe in South Jersey. It ranks up to the best pizza joints down the shore. Service is top notch and prices and pretty reasonable. They do deliver but if you are out of your area, do a take out. It's worth it. They also have seating as well. Steeaalaaaaaa (Seinfeld) You will not be disappointed! Give me a like if you tried.",
-    avatar: 'ER',
   },
   {
     id: '3',
@@ -87,9 +87,9 @@ const GoogleReviewsCarousel: React.FC = () => {
   };
 
   return (
-    <div className='font-lora mx-auto max-w-6xl px-4 py-8'>
+    <div className='font-lora mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-4'>
       <div className='mb-8 text-center'>
-        <h2 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl'>
+        <h2 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
           What{' '}
           <span className='bg-gradient-to-r from-gray-900 via-red-700 to-red-800 bg-clip-text text-transparent'>
             Our Customers Say
@@ -106,7 +106,7 @@ const GoogleReviewsCarousel: React.FC = () => {
       </div>
 
       <div className='relative'>
-        <div className='relative min-h-[300px] overflow-hidden rounded-2xl border border-gray-100 bg-white p-8 shadow-lg'>
+        <div className='relative min-h-[500px] overflow-hidden rounded-2xl border border-gray-100 bg-white p-8 shadow-lg lg:min-h-[300px]'>
           <Quote className='absolute top-4 right-4 h-12 w-12 rotate-12 transform text-red-100' />
 
           <div className='relative z-10'>

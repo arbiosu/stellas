@@ -54,8 +54,8 @@ function HoursCard() {
     <Card className='relative h-full w-full overflow-hidden border-2'>
       <CardHeader className='relative z-10 pb-6 text-center'>
         <div className='mb-2 flex items-center justify-center gap-3'>
-          <Clock className='h-8 w-8 animate-pulse text-red-600' />
-          <CardTitle className='bg-gradient-to-r from-gray-800 via-red-700 to-red-800 bg-clip-text text-4xl font-bold text-transparent md:text-5xl'>
+          <Clock className='h-8 w-8 text-red-800' />
+          <CardTitle className='text-4xl font-bold md:text-5xl'>
             Hours
           </CardTitle>
         </div>
@@ -94,7 +94,7 @@ function HoursCard() {
                     {item.day}
                   </div>
                   {index === currentDayIndex && (
-                    <span className='inline-flex animate-pulse items-center rounded-full border border-red-200 bg-red-100 px-3 py-1 text-xs font-medium text-red-900'>
+                    <span className='inline-flex animate-pulse items-center rounded-full border border-red-200 bg-red-100 px-3 py-1 text-xs font-bold text-red-900'>
                       Today
                     </span>
                   )}
@@ -129,8 +129,8 @@ function LocationCard() {
     <Card className='relative h-full w-full overflow-hidden border-2 border-gray-200'>
       <CardHeader className='relative z-10 pb-6 text-center'>
         <div className='mb-4 flex items-center justify-center gap-3'>
-          <MapPin className='h-8 w-8 animate-bounce text-red-600' />
-          <CardTitle className='bg-gradient-to-r from-gray-800 via-red-700 to-red-800 bg-clip-text text-4xl font-bold text-transparent md:text-5xl'>
+          <MapPin className='h-8 w-8 text-red-800' />
+          <CardTitle className='text-4xl font-bold md:text-5xl'>
             Location
           </CardTitle>
         </div>
@@ -144,10 +144,9 @@ function LocationCard() {
               target='_blank'
               rel='noopener noreferrer'
               prefetch={false}
-              className='group flex items-center gap-3 rounded-lg border border-red-200 bg-white/70 px-6 py-4 text-center backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-red-400 hover:bg-white/90 hover:shadow-lg'
+              className='group flex items-center gap-3 rounded-lg border border-red-800 bg-white/70 px-6 py-4 text-center backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/90 hover:shadow-lg'
             >
-              <MapPin className='h-5 w-5 text-red-600 group-hover:animate-bounce' />
-              <span className='text-lg font-medium text-gray-700 group-hover:text-red-700'>
+              <span className='text-lg font-medium text-gray-700 group-hover:text-blue-700'>
                 219 Haddonfield-Berlin Rd., Cherry Hill, NJ 08034
               </span>
               <ExternalLink className='h-4 w-4 text-red-600 opacity-70 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100' />
@@ -167,25 +166,17 @@ function LocationCard() {
               <Image
                 src='/stella-sign.jpeg'
                 alt='Front view of Stella Pizza in Cherry Hill New Jersey'
-                width={800}
-                height={600}
+                width={400}
+                height={400}
                 className={`h-full w-full object-cover transition-all duration-500 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                 onLoad={() => setImageLoaded(true)}
               />
 
-              {/* Overlay effects */}
               <div className='absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100'></div>
               <div className='absolute right-4 bottom-4 left-4 translate-y-full transform rounded-lg bg-white/80 p-4 backdrop-blur-sm transition-transform duration-300 group-hover:translate-y-0'>
-                <p className='font-medium text-gray-800'>
+                <p className='flex justify-center font-medium text-gray-800'>
                   Authentic Italian Pizza • Family Owned • Established 2005
                 </p>
-              </div>
-
-              {/* Floating action button */}
-              <div className='absolute top-4 right-4 -translate-y-2 transform opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100'>
-                <button className='rounded-full bg-red-500 p-3 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-red-600'>
-                  <ExternalLink className='h-5 w-5' />
-                </button>
               </div>
             </div>
           </div>
@@ -197,10 +188,13 @@ function LocationCard() {
 
 export default function LocationSection() {
   return (
-    <section id='location' className='relative min-h-screen overflow-hidden'>
-      <div className='font-lora relative z-10 container mx-auto max-w-7xl px-6'>
+    <section
+      id='location'
+      className='relative flex min-h-screen flex-col justify-center overflow-hidden'
+    >
+      <div className='font-lora relative z-10 container mx-auto max-w-7xl px-2'>
         <div className='mb-16 text-center'>
-          <h3 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl'>
+          <h3 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
             Visit{' '}
             <span className='bg-gradient-to-r from-gray-900 via-red-700 to-red-800 bg-clip-text text-transparent'>
               Stella

@@ -111,9 +111,9 @@ export default function BentoGridGallery() {
   ];
 
   return (
-    <div className='font-lora container mx-auto max-w-full px-4 py-12'>
+    <div className='font-lora container mx-auto max-w-full px-4'>
       <div className='mb-12 text-center'>
-        <h4 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl'>
+        <h4 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
           Our Menu{' '}
           <span className='bg-gradient-to-r from-gray-900 via-red-700 to-red-800 bg-clip-text text-transparent'>
             Gallery

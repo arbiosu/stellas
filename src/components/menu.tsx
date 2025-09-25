@@ -36,18 +36,6 @@ function MenuItemPreviewCard({ item }: { item: MenuItemPreview }) {
             {item.description}
           </CardDescription>
         </CardHeader>
-        <CardContent className='flex justify-center pt-2'>
-          <div className='relative overflow-hidden rounded-full bg-gradient-to-br from-orange-50 to-red-50 p-2 transition-all duration-300 group-hover:from-orange-100 group-hover:to-red-100'>
-            <Image
-              src={item.src}
-              alt={`${item.type} icon`}
-              height={64}
-              width={64}
-              unoptimized
-              className='transition-transform duration-300 group-hover:scale-110'
-            />
-          </div>
-        </CardContent>
       </Card>
     </Link>
   );
@@ -57,14 +45,14 @@ export default function MenuPreview({ items }: { items: MenuItemPreview[] }) {
   return (
     <section
       id='menu'
-      className='font-lora py-16'
+      className='font-lora flex min-h-screen flex-col justify-center'
       aria-labelledby='menu-heading'
     >
       <div className='container mx-auto px-4'>
         <div className='mb-12 text-center'>
           <h2
             id='menu-heading'
-            className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl'
+            className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'
           >
             Our Menu{' '}
             <span className='bg-gradient-to-r from-gray-900 via-red-700 to-red-800 bg-clip-text text-transparent'>

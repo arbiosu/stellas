@@ -59,15 +59,15 @@ function SpecialsCards({
           </div>
 
           <div className='relative p-6 lg:p-8'>
-            <h3
+            <p
               className={cn(
                 'text-xl leading-tight font-bold text-gray-900',
-                'transition-colors duration-300 ease-out md:text-2xl lg:text-3xl',
+                'transition-colors duration-300 ease-out md:text-3xl',
                 'group-hover:text-red-600'
               )}
             >
               {label}
-            </h3>
+            </p>
 
             <div
               className={cn(
@@ -86,7 +86,7 @@ function SpecialsCards({
 export default function SpecialsGrid({ cards }: { cards: SpecialsProps[] }) {
   if (cards.length === 0) {
     return (
-      <div className='flex items-center justify-center py-16'>
+      <div className='flex items-center justify-center'>
         <div className='text-center'>
           <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800'>
             <svg
@@ -112,7 +112,7 @@ export default function SpecialsGrid({ cards }: { cards: SpecialsProps[] }) {
   }
 
   return (
-    <div className='font-lora mx-auto w-full max-w-7xl p-4 text-center'>
+    <div className='font-lora mx-auto flex min-h-screen w-full max-w-7xl flex-col justify-center px-2 text-center'>
       <h3 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
         Everyday Specials{' '}
         <span className='bg-gradient-to-r from-gray-900 via-red-700 to-red-800 bg-clip-text text-transparent'>
@@ -121,12 +121,12 @@ export default function SpecialsGrid({ cards }: { cards: SpecialsProps[] }) {
       </h3>
       <p className='mx-auto mb-8 max-w-2xl text-xl text-gray-600 lg:text-2xl'>
         Available everyday,{' '}
-        <span className='font-extrabold underline decoration-red-600 decoration-2 underline-offset-4'>
+        <span className='font-extrabold underline decoration-red-800 decoration-2 underline-offset-4'>
           walk-in only!
         </span>
       </p>
 
-      <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3'>
+      <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
         {cards.map((card, index) => (
           <SpecialsCards key={index} {...card} index={index} />
         ))}
