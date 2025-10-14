@@ -90,10 +90,7 @@ const GoogleReviewsCarousel: React.FC = () => {
     <div className='font-lora mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-4'>
       <div className='mb-8 text-center'>
         <h2 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
-          What{' '}
-          <span className='bg-gradient-to-r from-gray-900 via-red-700 to-red-800 bg-clip-text text-transparent'>
-            Our Customers Say
-          </span>
+          What Our Customers Say
         </h2>
         <div className='mb-4 flex items-center justify-center gap-2'>
           <div className='flex items-center gap-1'>{renderStars(5)}</div>
@@ -102,7 +99,7 @@ const GoogleReviewsCarousel: React.FC = () => {
           </span>
           <span className='text-gray-500'>• Based on 133 reviews</span>
         </div>
-        <div className='mx-auto h-1 w-20 rounded-full bg-red-500'></div>
+        <div className='mx-auto h-1 w-20 rounded-full bg-red-700'></div>
       </div>
 
       <div className='relative'>

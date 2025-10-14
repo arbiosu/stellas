@@ -86,7 +86,27 @@ export default function BentoGridGallery() {
       className: 'aspect-[2/1] md:col-span-2',
       featured: true,
     },
-
+    {
+      src: '/chkn-caesar-salad.jpeg',
+      alt: 'Chicken Caesar Salad, Stella Pizza Cherry Hill NJ',
+      title: 'Chicken Caesar Salad',
+      category: 'Salads',
+      className: 'aspect-square',
+    },
+    {
+      src: '/burger-deluxe.jpeg',
+      alt: 'Chicken Caesar Salad, Stella Pizza Cherry Hill NJ',
+      title: 'Cheeseburger Deluxe',
+      category: 'Burgers',
+      className: 'aspect-square',
+    },
+    {
+      src: '/meatballs.jpeg',
+      alt: 'Pasta with Meatballs, Stella Pizza Cherry Hill NJ',
+      title: 'Spaghetti Pasta with Meatballs',
+      category: 'Pastas',
+      className: 'aspect-square',
+    },
     {
       src: '/eggplant-parm-1.jpeg',
       alt: 'Eggplant Parm, Stella Pizza Cherry Hill NJ',
@@ -112,14 +132,9 @@ export default function BentoGridGallery() {
 
   return (
     <div className='font-lora container mx-auto max-w-full px-4'>
-      <div className='mb-12 text-center'>
-        <h4 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
-          Our Menu{' '}
-          <span className='bg-gradient-to-r from-gray-900 via-red-700 to-red-800 bg-clip-text text-transparent'>
-            Gallery
-          </span>
-        </h4>
-      </div>
+      <h4 className='mb-6 text-center text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
+        Our Menu Gallery
+      </h4>
 
       <div className='grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8'>
         {images.map((image, index) => (
@@ -137,7 +152,7 @@ export default function BentoGridGallery() {
                 unoptimized
               />
 
-              <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100' />
+              <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100' />
 
               {image.featured && (
                 <div className='absolute top-4 left-4'>
@@ -164,11 +179,7 @@ export default function BentoGridGallery() {
                   {image.title}
                 </h3>
               </div>
-
-              <div className='absolute inset-0 rounded-2xl opacity-0 ring-2 ring-white/20 transition-opacity duration-300 group-hover:opacity-100' />
             </div>
-
-            <div className='absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 ease-out group-hover:translate-x-full' />
           </div>
         ))}
       </div>

@@ -195,13 +195,10 @@ export default function LocationSection() {
       <div className='font-lora relative z-10 container mx-auto max-w-7xl px-2'>
         <div className='mb-16 text-center'>
           <h3 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
-            Visit{' '}
-            <span className='bg-gradient-to-r from-gray-900 via-red-700 to-red-800 bg-clip-text text-transparent'>
-              Stella
-            </span>
+            Visit Stella
           </h3>
           <p className='mx-auto max-w-2xl text-xl text-gray-600'>
-            Experience authentic Italian flavors in the heart of Cherry Hill
+            Experience authentic Italian pizza in Cherry Hill
           </p>
         </div>
 
