@@ -1,8 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -27,7 +25,7 @@ function MenuItemPreviewCard({ item }: { item: MenuItemPreview }) {
       className='group block'
       aria-label={`View ${item.type} section of menu`}
     >
-      <Card className='group-focus-visible:ring-primary h-full border-none shadow-sm transition-all duration-300 group-focus-visible:ring-2 group-focus-visible:ring-offset-2 hover:-translate-y-2 hover:shadow-lg'>
+      <Card className='group-focus-visible:ring-primary h-full border-none drop-shadow drop-shadow-red-700 transition-all duration-300 group-focus-visible:ring-2 group-focus-visible:ring-offset-2 hover:-translate-y-2'>
         <CardHeader className='pb-4 text-center'>
           <CardTitle className='group-hover:text-primary text-xl font-semibold text-gray-900 transition-colors duration-200'>
             {item.type}
@@ -46,24 +44,14 @@ export default function MenuPreview({ items }: { items: MenuItemPreview[] }) {
     <section
       id='menu'
       className='font-lora flex min-h-screen flex-col justify-center'
-      aria-labelledby='menu-heading'
     >
       <div className='container mx-auto px-4'>
         <div className='mb-12 text-center'>
-          <h2
-            id='menu-heading'
-            className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'
-          >
-            Our Menu{' '}
-            <span className='bg-gradient-to-r from-gray-900 via-red-700 to-red-800 bg-clip-text text-transparent'>
-              at a Glance
-            </span>
+          <h2 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
+            Our Menu at a Glance
           </h2>
-          <p className='mx-auto mb-8 max-w-2xl text-lg text-gray-600'>
-            Discover our latest menu
-          </p>
           <Link
-            href='/2025_Stella_Pizza_Menu_Cherry_Hill_NJ.pdf'
+            href='/stella-menu-2025.pdf'
             target='_blank'
             rel='noopener noreferrer'
             prefetch={false}

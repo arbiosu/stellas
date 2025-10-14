@@ -63,7 +63,7 @@ function SpecialsCards({
               className={cn(
                 'text-xl leading-tight font-bold text-gray-900',
                 'transition-colors duration-300 ease-out md:text-3xl',
-                'group-hover:text-red-600'
+                'group-hover:text-red-700'
               )}
             >
               {label}
@@ -71,7 +71,7 @@ function SpecialsCards({
 
             <div
               className={cn(
-                'mt-4 h-1 w-0 rounded-full bg-gradient-to-r from-gray-900 to-red-600',
+                'mt-4 h-1 w-0 rounded-full bg-gradient-to-r from-gray-900 to-red-700',
                 'transition-all duration-500 ease-out',
                 'group-hover:w-16'
               )}
@@ -114,10 +114,7 @@ export default function SpecialsGrid({ cards }: { cards: SpecialsProps[] }) {
   return (
     <div className='font-lora mx-auto flex min-h-screen w-full max-w-7xl flex-col justify-center px-2 text-center'>
       <h3 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
-        Everyday Specials{' '}
-        <span className='bg-gradient-to-r from-gray-900 via-red-700 to-red-800 bg-clip-text text-transparent'>
-          at Stella
-        </span>
+        Everyday Specials at Stella
       </h3>
       <p className='mx-auto mb-8 max-w-2xl text-xl text-gray-600 lg:text-2xl'>
         Available everyday,{' '}
