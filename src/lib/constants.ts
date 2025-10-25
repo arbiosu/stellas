@@ -4,12 +4,12 @@ export const SLICE_SPECIALS = [
   {
     label: '2 Plain Slices + Fountain Soda',
     imgUrl: '/plain-slices.jpeg',
-    price: '8.50',
+    price: '8.99',
   },
   {
     label: '2 Specialty Slices + Fountain Soda',
     imgUrl: '/new-specials-pic.jpg',
-    price: '10.50',
+    price: '10.99',
   },
   {
     label: '2 Square Slices + Fountain Soda',
@@ -27,7 +27,8 @@ export const MENU_ITEMS: MenuItemPreview[] = [
   },
   {
     type: 'Wings',
-    description: 'Crispy Wings - Classic Boneless or Buffalo Style',
+    description:
+      'Classic Boneless or Buffalo with your choice of Hot, Mild, Garlic Parm or Honey BBQ Sauce',
     src: '/wings.svg',
     menuSrc: '/menu/wings.png',
   },
@@ -63,32 +64,34 @@ export const MENU_ITEMS: MenuItemPreview[] = [
   },
   {
     type: 'Strombolis & Calzones',
-    description: 'Authentic Italian Strombolis & Golden Calzones',
+    description: 'Authentic Italian Strombolis & Calzones - 12"',
     src: '/pizza.svg',
     menuSrc: '/menu/strombolis.png',
   },
 
   {
     type: 'Wraps',
-    description: 'Hearty Wraps in Large Flour Tortillas',
+    description: 'Classic wraps in a large flour tortilla',
     src: '/wraps.svg',
     menuSrc: '/menu/wraps.png',
   },
   {
     type: 'Paninis',
-    description: 'Artisan Ciabatta Bread',
+    description: 'Served on Rustic Ciabatta Bread',
     src: '/panini.svg',
     menuSrc: '/menu/paninis.png',
   },
   {
     type: 'Classic Italian Subs',
-    description: 'Classic Italian Sub Sandwiches',
+    description:
+      'Classic Italian Sub Sandwiches served on a fresh Italian roll',
     src: '/sub.svg',
     menuSrc: '/menu/subs.png',
   },
   {
     type: 'Hoagies',
-    description: 'Fresh Hoagies with Premium Fixings on Italian Rolls',
+    description:
+      'Served with EVOO, Lettuce, Tomatoes, Onions, Oregano, Salt, Pepper, Fresh Italian Roll',
     src: '/hoagie.svg',
     menuSrc: '/menu/hoagies.png',
   },
