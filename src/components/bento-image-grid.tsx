@@ -110,7 +110,7 @@ export default function BentoGridGallery() {
     {
       src: '/eggplant-parm-1.jpeg',
       alt: 'Eggplant Parm, Stella Pizza Cherry Hill NJ',
-      title: 'Eggplant Parm',
+      title: 'Eggplant Parm Panini',
       category: 'Panini',
       className: 'aspect-square',
     },
