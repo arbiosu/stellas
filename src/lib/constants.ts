@@ -46,7 +46,7 @@ export const MENU_ITEMS: MenuItemPreview[] = [
   },
   {
     type: 'Steaks',
-    description: '½ lb Sirloin Steaks on Fresh Italian Rolls',
+    description: 'Hand-laid Loin Tail Steak on Fresh Italian Rolls',
     src: '/bread.svg',
     menuSrc: '/menu/steaks.png',
   },
