@@ -9,8 +9,8 @@ import { ExternalLink, MapPin, Clock } from 'lucide-react';
 const HOURS_DATA = [
   { day: 'Monday', hours: 'Closed', isClosed: true },
   { day: 'Tuesday', hours: '11AM - 9PM', isClosed: false },
-  { day: 'Wednesday', hours: '11AM - 9PM', isClosed: false },
-  { day: 'Thursday', hours: '11AM - 9PM', isClosed: false },
+  { day: 'Wednesday', hours: 'Closed - Holiday', isClosed: true },
+  { day: 'Thursday', hours: 'Closed - Holiday', isClosed: true },
   { day: 'Friday', hours: '11AM - 9PM', isClosed: false },
   { day: 'Saturday', hours: '11AM - 9PM', isClosed: false },
   { day: 'Sunday', hours: '12PM - 9PM', isClosed: false },
