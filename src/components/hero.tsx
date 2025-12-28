@@ -18,7 +18,7 @@ export function Hero() {
 
       <div className='relative z-10 px-4'>
         <h1 className='font-italiana mb-4 text-7xl font-bold text-white drop-shadow-lg md:text-9xl'>
-          Stella Pizza
+          Stella Pizza Cherry Hill
         </h1>
         <p className='font-lora mb-6 text-xl font-semibold text-red-50 md:text-4xl'>
           Eat In • Take Out • Delivery
