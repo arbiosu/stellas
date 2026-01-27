@@ -8,15 +8,15 @@ export default function BentoGridGallery() {
     {
       src: '/stella-pepperoni.jpeg',
       alt: 'Thin crust pepperoni pizza, Stella Pizza Cherry Hill NJ',
-      title: 'Pepperoni Pizza',
+      title: 'Pepperoni',
       category: 'Pizza',
       className: 'aspect-square',
     },
     {
-      src: '/stella-grandma.jpeg',
-      alt: 'Thin crust Grandma pizza, Stella Pizza Cherry Hill NJ',
-      title: 'Grandma Pizza',
-      category: 'Square Pizza',
+      src: '/garlic-parm-wings.jpeg',
+      alt: 'Garlic Parm Wings - Stella Pizza Cherry Hill NJ',
+      title: 'Garlic Parm',
+      category: 'Wings',
       className: 'aspect-square',
     },
     {

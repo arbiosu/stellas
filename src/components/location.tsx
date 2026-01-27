@@ -13,7 +13,7 @@ const HOURS_DATA = [
   { day: 'Thursday', hours: '11AM - 9PM', isClosed: false },
   { day: 'Friday', hours: '11AM - 9PM', isClosed: false },
   { day: 'Saturday', hours: '11AM - 9PM', isClosed: false },
-  { day: 'Sunday', hours: 'Closed - Inclement Weather', isClosed: true },
+  { day: 'Sunday', hours: '12PM-9PM', isClosed: false },
 ];
 
 function getCurrentDayStatus() {
