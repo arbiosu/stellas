@@ -6,6 +6,7 @@ import BentoGridGallery from '@/components/bento-image-grid';
 import GoogleReviewsCarousel from '@/components/reviews';
 import SpecialsGrid from '@/components/slice-specials';
 import { MENU_ITEMS, SLICE_SPECIALS } from '@/lib/constants';
+import { Gallery } from '@/components/gallery/gallery';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <GoogleReviewsCarousel />
         <div className='pt-12 lg:pt-0'></div>
         <BentoGridGallery />
+        <Gallery />
       </main>
       <div className='pt-12'></div>
       <SiteFooter />
