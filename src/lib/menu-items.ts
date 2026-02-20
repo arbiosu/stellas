@@ -1,23 +1,5 @@
 import type { MenuItemPreview } from '@/components/menu';
 
-export const SLICE_SPECIALS = [
-  {
-    label: '2 Plain Slices + Fountain Soda',
-    imgUrl: '/plain-slices.jpeg',
-    price: '8.99',
-  },
-  {
-    label: '2 Specialty Slices + Fountain Soda',
-    imgUrl: '/new-specials-pic.jpg',
-    price: '10.99',
-  },
-  {
-    label: '2 Square Slices + Fountain Soda',
-    imgUrl: '/square-slices.jpeg',
-    price: '8.50',
-  },
-];
-
 export const MENU_ITEMS: MenuItemPreview[] = [
   {
     type: 'Pizza',
