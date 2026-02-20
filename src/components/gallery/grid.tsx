@@ -21,7 +21,7 @@ export function GalleryGrid({ images, onImageClick }: GalleryGridProps) {
             'animate-in fade-in slide-in-from-bottom-4'
           )}
           style={{
-            animationDelay: `${index * 60}ms`,
+            animationDelay: `${index * 20}ms`,
             animationFillMode: 'both',
             animationDuration: '400ms',
           }}

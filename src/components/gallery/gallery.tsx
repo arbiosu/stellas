@@ -57,9 +57,9 @@ export function Gallery() {
   return (
     <div className='bg-background min-h-screen'>
       <header className='mx-auto max-w-7xl px-4 pt-16 pb-8 sm:px-6 lg:px-8'>
-        <h1 className='text-foreground font-lora text-4xl font-bold text-balance sm:text-5xl'>
+        <h2 className='text-foreground font-serif text-4xl font-semibold tracking-tight text-balance md:text-5xl lg:text-6xl'>
           Menu Gallery
-        </h1>
+        </h2>
         <p className='text-muted-foreground mt-3 max-w-2xl text-lg leading-relaxed text-pretty'>
           A curated collection of our favorites at Stella.
         </p>
