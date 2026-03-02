@@ -4,7 +4,7 @@ export const specials = [
     title: '2 Plain Cheese Slices + Fountain Soda',
     description: 'Choose from our selection of classic plain cheese slices.',
     price: '$8.99',
-    imageSrc: '/plain-slices.jpeg',
+    imageSrc: '/regular-specials-opt.jpeg',
     imageAlt: 'Two plain cheese slices and a fountain soda',
   },
   {
@@ -22,7 +22,7 @@ export const specials = [
     description:
       'Choose from our selection of Grandma, Brooklyn, and Cheese thin crust sicilian square slices.',
     price: '$8.50',
-    imageSrc: '/square-slices.jpeg',
+    imageSrc: '/square-specials-opt.jpeg',
     imageAlt: '3 square sices - brooklyn, grandma, plain - and a fountain soda',
   },
 ];
