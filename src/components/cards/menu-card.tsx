@@ -38,7 +38,7 @@ export default function MenuCard({
         prefetch={false}
         aria-label={`View ${title} section of menu`}
       >
-        <Card className='relative h-120 max-w-sm overflow-hidden rounded-2xl border-0 p-0'>
+        <Card className='relative h-120 max-w-2xs overflow-hidden rounded-2xl border-0 p-0 md:max-w-sm'>
           <Image
             src={imageSrc ?? '/placeholder.svg'}
             alt={subtitle ?? 'An image'}
