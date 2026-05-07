@@ -1,133 +1,58 @@
-import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
+import SectionHeader from './text/section-header';
+import SlidingCardGrid from './grid/sliding-card-grid';
+import { SpecialCard } from './cards/specials-card';
 
-interface SpecialsProps {
-  label: string;
-  imgUrl: string;
-  price: string;
-}
+const specials = [
+  {
+    title: '2 Cheese Slices + Fountain Soda',
+    description: 'Select any two classic plain cheese slices.',
+    price: '$8.99',
+    imageSrc: '/regular-specials-opt.jpeg',
+    imageAlt: 'Two plain cheese slices and a fountain soda',
+  },
+  {
+    title: '2 Specialty Slices + Fountain Soda',
+    description:
+      'Select any two from our selection of signature gourmet slices.',
+    price: '$10.99',
+    imageSrc: '/new-specials-pic.jpg',
+    imageAlt:
+      'Two specialty slices - buffalo chicken and broccoli tomato ricotta and a fountain soda.',
+  },
+  {
+    title: '2 Square Slices + Fountain Soda',
+    description:
+      'Select any two Grandma, Brooklyn, or Cheese thin crust square slices.',
+    price: '$8.50',
+    imageSrc: '/square-specials-opt.jpeg',
+    imageAlt: '3 square sices - brooklyn, grandma, plain - and a fountain soda',
+  },
+];
 
-function SpecialsCards({
-  label,
-  imgUrl,
-  price,
-}: SpecialsProps & { index: number }) {
+export default function SliceSpecialSection() {
   return (
-    <div className='group block'>
-      <Card
-        className={cn(
-          'relative overflow-hidden border-0 bg-white p-0',
-          'transition-all duration-500 ease-out',
-          'hover:shadow-xl hover:shadow-black/5',
-          'will-change-transform'
-        )}
-      >
-        <CardContent className='relative m-0 h-full p-0'>
-          <div className='relative -m-0 h-64 w-full overflow-hidden md:h-72 lg:h-80'>
-            <Image
-              src={imgUrl}
-              alt={label}
-              fill
-              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-              className={cn(
-                'object-cover object-center',
-                'transition-transform duration-700 ease-out',
-                'will-change-transform'
-              )}
-              priority={false}
-              placeholder='blur'
-              blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=='
-            />
-
-            <div className='absolute top-4 left-4'>
-              <Badge
-                variant='secondary'
-                className={cn(
-                  'bg-white/95 px-3 py-1.5 text-lg font-bold text-gray-900',
-                  'border border-white/30 backdrop-blur-md',
-                  'transition-all duration-300 ease-out',
-                  'group-hover:bg-red-700',
-                  'group-hover:border-transparent group-hover:text-white',
-                  'shadow-lg group-hover:shadow-xl'
-                )}
-              >
-                ${price}
-              </Badge>
-            </div>
-          </div>
-
-          <div className='relative p-6 lg:p-8'>
-            <p
-              className={cn(
-                'text-xl leading-tight font-bold text-gray-900',
-                'transition-colors duration-300 ease-out md:text-3xl',
-                'group-hover:text-red-700'
-              )}
-            >
-              {label}
-            </p>
-
-            <div
-              className={cn(
-                'mt-4 h-1 w-0 rounded-full bg-gradient-to-r from-gray-900 to-red-700',
-                'transition-all duration-500 ease-out',
-                'group-hover:w-16'
-              )}
-            />
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  );
-}
-
-export default function SpecialsGrid({ cards }: { cards: SpecialsProps[] }) {
-  if (cards.length === 0) {
-    return (
-      <div className='flex items-center justify-center'>
-        <div className='text-center'>
-          <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800'>
-            <svg
-              className='h-8 w-8 text-gray-400'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2 2v-5m16 0H4m16 0l-2-2m-2 2l2 2M4 13l2-2m0 0l2 2'
-              />
-            </svg>
-          </div>
-          <p className='text-xl text-gray-500 dark:text-gray-400'>
-            No items to display
-          </p>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className='font-lora mx-auto flex min-h-screen w-full max-w-7xl flex-col justify-center px-2 text-center'>
-      <h3 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
-        Everyday Specials at Stella
-      </h3>
-      <p className='mx-auto mb-8 max-w-2xl text-xl text-gray-600 lg:text-2xl'>
-        Available everyday,{' '}
-        <span className='font-extrabold underline decoration-red-800 decoration-2 underline-offset-4'>
-          walk-in only!
-        </span>
-      </p>
-
-      <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
-        {cards.map((card, index) => (
-          <SpecialsCards key={index} {...card} index={index} />
+    <section className='container mx-auto max-w-6xl p-4'>
+      <SectionHeader
+        overline='Everyday Specials'
+        heading='Daily Specials'
+        subtitle='Available everyday. Walk-in only!'
+      />
+      <SlidingCardGrid density={'loose'}>
+        {specials.map((card, i) => (
+          <SpecialCard
+            key={i}
+            title={card.title}
+            description={card.description}
+            price={card.price}
+            imageSrc={card.imageSrc}
+            imageAlt={card.imageAlt}
+            index={i}
+          />
         ))}
-      </div>
-    </div>
+      </SlidingCardGrid>
+      <p className='text-muted-foreground/60 mt-10 text-center font-sans text-xs tracking-wide md:mt-14'>
+        Specials available while supplies last.
+      </p>
+    </section>
   );
 }

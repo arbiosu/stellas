@@ -1,24 +1,20 @@
-import { Hero } from '@/components/hero';
-import MenuPreview from '@/components/menu';
+import { Hero, HeroAlt } from '@/components/hero';
 import LocationSection from '@/components/location';
-import SiteFooter from '@/components/footer';
 import GoogleReviewsCarousel from '@/components/reviews';
-import { DailySpecials } from '@/components/specials/daily-specials';
-import { MENU_ITEMS } from '@/lib/menu-items';
 import { Gallery } from '@/components/gallery/gallery';
+import SliceSpecialSection from '@/components/slice-specials';
+import MenuCardSection from '@/components/menu-stacked-grid';
 
 export default function Home() {
   return (
     <div>
-      <main>
-        <Hero />
-        <DailySpecials />
-        <MenuPreview items={MENU_ITEMS} />
+      <main className='flex flex-col gap-8'>
+        <HeroAlt />
+        <SliceSpecialSection />
         <LocationSection />
         <GoogleReviewsCarousel />
         <Gallery />
       </main>
-      <SiteFooter />
     </div>
   );
 }
