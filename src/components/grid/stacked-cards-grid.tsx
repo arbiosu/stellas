@@ -21,7 +21,7 @@ export default function StackedCardsGrid({
     <div
       ref={scrollerRef}
       className={cn(
-        'scrollbar-hide flex overflow-x-auto pr-[80%] pb-6',
+        'scrollbar-hide flex snap-x snap-mandatory overflow-x-auto pr-[80%] pb-6',
         className
       )}
       style={{
