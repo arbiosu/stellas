@@ -35,7 +35,7 @@ export const cards = [
   {
     title: 'Steaks',
     subtitle: 'Hand-laid Loin Tail Steak on Fresh Italian Rolls',
-    imageSrc: '/steak.jpeg',
+    imageSrc: '/chs-stk-special.jpeg',
     menuSrc: '/menu/steaks.png',
   },
   {
@@ -79,7 +79,7 @@ export const cards = [
     title: 'Hoagies',
     subtitle:
       'Served with EVOO, Lettuce, Tomatoes, Onions, Oregano, Salt, Pepper, Fresh Italian Roll',
-    imageSrc: '/stella-hoagie.jpeg',
+    imageSrc: '/italian-hoagie.jpeg',
     menuSrc: '/menu/hoagies.png',
   },
 ];

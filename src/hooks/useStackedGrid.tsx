@@ -7,8 +7,9 @@ import { useRef, useCallback, useEffect, useState } from 'react';
 export function useStackedGrid(length: number) {
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const scrollEndTimer = useRef<number | null>(null);
 
-  const onScroll = useCallback(() => {
+  const computeActive = useCallback(() => {
     const el = scrollerRef.current;
     if (!el) return;
     const children = Array.from(el.children) as HTMLElement[];
@@ -27,11 +28,19 @@ export function useStackedGrid(length: number) {
     setActiveIndex((prev) => (prev !== closest ? closest : prev));
   }, []);
 
+  const onScroll = useCallback(() => {
+    if (scrollEndTimer.current) window.clearTimeout(scrollEndTimer.current);
+    scrollEndTimer.current = window.setTimeout(computeActive, 100);
+  }, [computeActive]);
+
   useEffect(() => {
     const el = scrollerRef.current;
     if (!el) return;
     el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
+    return () => {
+      el.removeEventListener('scroll', onScroll);
+      if (scrollEndTimer.current) window.clearTimeout(scrollEndTimer.current);
+    };
   }, [onScroll]);
 
   const scrollTo = (index: number) => {

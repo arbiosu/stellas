@@ -11,7 +11,8 @@ export type Category =
   | 'paninis'
   | 'subs'
   | 'hoagies'
-  | 'atmosphere';
+  | 'atmosphere'
+  | 'beverages';
 
 export interface GalleryImage {
   id: string;
@@ -33,6 +34,7 @@ export const categories: { value: Category; label: string }[] = [
   { value: 'strombolis', label: 'Strombolis' },
   { value: 'paninis', label: 'Paninis' },
   { value: 'hoagies', label: 'Hoagies' },
+  { value: 'beverages', label: 'Beverages' },
 ];
 
 export const galleryImages: GalleryImage[] = [
@@ -239,7 +241,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 'arancini-1',
     src: '/arancini-opt.jpeg',
-    alt: 'Arancini Balls, Stella Pizza Cherry Hill NJ',
+    alt: 'Arancini Rice Balls, Stella Pizza Cherry Hill NJ',
     category: 'appetizers',
     title: 'Arancini',
     aspect: 'portrait',
@@ -290,6 +292,30 @@ export const galleryImages: GalleryImage[] = [
     alt: 'Stromboli, Stella Pizza Cherry Hill NJ',
     category: 'strombolis',
     title: 'Stromboli',
+    aspect: 'portrait',
+  },
+  {
+    id: 'stk-1',
+    src: '/chs-stk-special.jpeg',
+    alt: 'Cheese Steak Special, Stella Pizza Cherry Hill NJ',
+    category: 'steaks',
+    title: 'Cheese Steak Special',
+    aspect: 'portrait',
+  },
+  {
+    id: 'stk-2',
+    src: '/chk-stk.jpeg',
+    alt: 'Chicken Pizza Steak, Stella Pizza Cherry Hill NJ',
+    category: 'steaks',
+    title: 'Chicken Pizza Steak',
+    aspect: 'portrait',
+  },
+  {
+    id: 'soda-1',
+    src: '/sodas.jpeg',
+    alt: 'Italian Sodas, Stella Pizza Cherry Hill NJ',
+    category: 'beverages',
+    title: 'Italian Sodas',
     aspect: 'portrait',
   },
 ];

@@ -31,6 +31,7 @@ export function Gallery() {
       atmosphere: 0,
       wraps: 0,
       subs: 0,
+      beverages: 0,
     };
     for (const img of galleryImages) {
       c[img.category]++;
