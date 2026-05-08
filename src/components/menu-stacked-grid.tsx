@@ -84,48 +84,19 @@ export const cards = [
   },
 ];
 
-export default function MenuCardSection() {
-  const { scrollerRef, activeIndex } = useStackedGrid(cards.length);
-
+export function MenuCards() {
+  const { scrollerRef, registerCard } = useStackedGrid(cards.length);
   return (
-    <section className='container mx-auto max-w-6xl p-4'>
-      <SectionHeader
-        overline='Stella Pizza Menu'
-        heading='Our Menu at a Glance'
-        subtitle=''
-      />
-
-      <StackedCardsGrid scrollerRef={scrollerRef}>
-        {cards.map((card, i) => (
+    <StackedCardsGrid scrollerRef={scrollerRef}>
+      {cards.map((card, i) => (
+        <div key={i} ref={(el) => registerCard(i, el)} className='shrink-0'>
           <MenuCard
-            key={i}
             imageSrc={card.imageSrc}
             menuSrc={card.menuSrc}
             title={card.title}
             subtitle={card.subtitle}
-            offset={i - activeIndex}
-            isActive={i === activeIndex}
           />
-        ))}
-      </StackedCardsGrid>
-    </section>
-  );
-}
-
-export function MenuCards() {
-  const { scrollerRef, activeIndex } = useStackedGrid(cards.length);
-  return (
-    <StackedCardsGrid scrollerRef={scrollerRef}>
-      {cards.map((card, i) => (
-        <MenuCard
-          key={i}
-          imageSrc={card.imageSrc}
-          menuSrc={card.menuSrc}
-          title={card.title}
-          subtitle={card.subtitle}
-          offset={i - activeIndex}
-          isActive={i === activeIndex}
-        />
+        </div>
       ))}
     </StackedCardsGrid>
   );
