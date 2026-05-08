@@ -1,9 +1,7 @@
 'use client';
 
-import SectionHeader from './text/section-header';
 import StackedCardsGrid from './grid/stacked-cards-grid';
 import MenuCard from './cards/menu-card';
-import AnimatedTextRoller from './text/rolling-text';
 import { useStackedGrid } from '@/hooks/useStackedGrid';
 
 export const cards = [
@@ -84,7 +82,7 @@ export const cards = [
   },
 ];
 
-export function MenuCards() {
+export default function MenuCards() {
   const { scrollerRef, registerCard } = useStackedGrid(cards.length);
   return (
     <StackedCardsGrid scrollerRef={scrollerRef}>

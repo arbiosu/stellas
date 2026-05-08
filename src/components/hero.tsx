@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { PhoneOutgoing } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from './ui/badge';
-import { MapPin, Phone, Mail, Clock, ArrowRight, FileText } from 'lucide-react';
-import { MenuCards } from './menu-stacked-grid';
+import { MapPin, Phone, Clock, FileText } from 'lucide-react';
+import MenuCards from './menu-stacked-grid';
 import RoundedButton from './buttons/rounded-button';
 
 export function HeroAlt() {
