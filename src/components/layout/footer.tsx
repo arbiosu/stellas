@@ -24,7 +24,7 @@ export default function SiteFooter() {
             </h3>
             <p className='text-foreground/60 mt-3 text-sm leading-relaxed'>
               Authentic Italian pizza crafted with love in the heart of Cherry
-              Hill since 2005.
+              Hill since 2003.
             </p>
           </div>
 
