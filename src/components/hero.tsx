@@ -19,9 +19,6 @@ export function HeroAlt() {
           <br />
           <span className='text-primary'>Cherry Hill</span>
         </h1>
-        <p className='max-w-md text-lg leading-relaxed font-extrabold'>
-          CLOSED: June 30 - July 13. Reopen on July 14th.
-        </p>
         <p className='text-muted-foreground max-w-md text-lg leading-relaxed'>
           Eat In • Take Out • Delivery
         </p>
