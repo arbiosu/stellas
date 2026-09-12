@@ -8,12 +8,12 @@ import { Clock } from 'lucide-react';
 
 const HOURS_DATA = [
   { day: 'Monday', shortDay: 'Mon', hours: 'Closed', isClosed: true },
-  { day: 'Tuesday', shortDay: 'Tue', hours: '11AM - 9PM', isClosed: false },
-  { day: 'Wednesday', shortDay: 'Wed', hours: '11AM - 9PM', isClosed: false },
-  { day: 'Thursday', shortDay: 'Thu', hours: '11AM - 9PM', isClosed: false },
-  { day: 'Friday', shortDay: 'Fri', hours: '11AM - 9PM', isClosed: false },
-  { day: 'Saturday', shortDay: 'Sat', hours: '11AM - 9PM', isClosed: false },
-  { day: 'Sunday', shortDay: 'Sun', hours: '12PM - 9PM', isClosed: false },
+  { day: 'Tuesday', shortDay: 'Tue', hours: '11AM - 9PM', isClosed: true },
+  { day: 'Wednesday', shortDay: 'Wed', hours: '11AM - 9PM', isClosed: true },
+  { day: 'Thursday', shortDay: 'Thu', hours: '11AM - 9PM', isClosed: true },
+  { day: 'Friday', shortDay: 'Fri', hours: '11AM - 9PM', isClosed: true },
+  { day: 'Saturday', shortDay: 'Sat', hours: '11AM - 9PM', isClosed: true },
+  { day: 'Sunday', shortDay: 'Sun', hours: '12PM - 9PM', isClosed: true },
 ];
 
 function getCurrentDayIndex() {
