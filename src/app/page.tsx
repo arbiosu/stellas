@@ -1,9 +1,8 @@
-import { Hero, HeroAlt } from '@/components/hero';
+import { HeroAlt } from '@/components/hero';
 import LocationSection from '@/components/location';
 import GoogleReviewsCarousel from '@/components/reviews';
 import { Gallery } from '@/components/gallery/gallery';
 import SliceSpecialSection from '@/components/slice-specials';
-import MenuCardSection from '@/components/menu-stacked-grid';
 
 export default function Home() {
   return (
