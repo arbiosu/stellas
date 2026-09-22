@@ -19,15 +19,6 @@ export function HeroAlt() {
           <br />
           <span className='text-primary'>Cherry Hill</span>
         </h1>
-        <p className='text-bold max-w-md text-center text-lg leading-relaxed'>
-          CLOSED: 9/12 - 9/21 due to a loss in our family.
-        </p>
-        <p className='text-bold max-w-md text-center text-lg leading-relaxed'>
-          REOPEN: 9/22
-        </p>
-        <p className='text-bold max-w-md text-center text-lg leading-relaxed'>
-          Thank you for understanding during this difficult time.
-        </p>
         <p className='text-muted-foreground max-w-md text-lg leading-relaxed'>
           Eat In • Take Out • Delivery
         </p>
